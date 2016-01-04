@@ -8,7 +8,7 @@ Given(/^they select create a new journey$/) do
 end
 
 Then(/^they should be on the create new journey page$/) do
-  expect(page).to have_content "Create a new Journey"
+  expect(page).to have_content "Create a new journey"
 end
 
 Given(/^they enter valid details$/) do
@@ -23,7 +23,7 @@ Then(/^a journey is created$/) do
 end
 
 Then(/^they are redirected to the journeys page$/) do
-  expect(page.current_path).to eq("journey/show/1")
+  expect(page.current_path).to eq("/journeys")
 end
 
 Given(/^they enter a description$/) do
@@ -40,4 +40,8 @@ end
 
 Given(/^they enter a title$/) do
   fill_in "Title", with: "Australia Holiday"
+end
+
+Then(/^they press submit$/) do
+  click_button "Create Journey"
 end
