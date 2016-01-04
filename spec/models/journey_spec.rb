@@ -22,5 +22,16 @@ RSpec.describe Journey, type: :model do
         expect(Journey.count).to eq(1)
       end
     end
+
+    context "Missing description" do
+      before do
+      @journey = Journey.new(title: "Australia Holiday")
+      end
+
+      it "should verify a description has been entered" do
+        expect {@journey.save!}.to raise_error(ActiveRecord::RecordInvalid,'Validation failed: Description can\'t be blank')
+        expect(Journey.count).to eq(1)
+      end
+    end
   end
 end
