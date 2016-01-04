@@ -10,7 +10,7 @@ development:
   database: TravelItinerary_development
 
 
-test:
+test: &test
   <<: *default
   database: TravelItinerary_test
 
@@ -19,3 +19,6 @@ production:
   database: TravelItinerary_production
   username: TravelItinerary
   password: <%= ENV['TRAVELITINERARY_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test
