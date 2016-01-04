@@ -14,12 +14,12 @@ RSpec.describe Journey, type: :model do
 
     context "Missing title" do
       before do
-      journey = Journey.create!(description: "Going on holiday to Australia")
+      @journey = Journey.new(description: "Going on holiday to Australia")
       end
 
       it "should verify a title has been entered" do
-        expect(Journey.count).to eq(0)
-        expect {journey.save!}.to  raise_error(ActiveRecord::RecordInvalid,'Validation failed: Title can\'t be blank')
+        expect {@journey.save!}.to raise_error(ActiveRecord::RecordInvalid,'Validation failed: Title can\'t be blank')
+        expect(Journey.count).to eq(1)
       end
     end
   end
