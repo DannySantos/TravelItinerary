@@ -21,7 +21,7 @@ Then(/^the account is created$/) do
 end
 
 Then(/^they are redirected to their dashboard$/) do
-  expect(page).to have_content "Welcome vvhiteknight"
+  expect(page).to have_content "Welcome! You have signed up successfully."
 end
 
 Given(/^they enter valid details excluding the username$/) do
