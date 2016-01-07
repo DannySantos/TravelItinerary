@@ -1,5 +1,5 @@
 Given(/^a traveller has a todo item$/) do
-  item = Item.create(description: "Visit Museum", journey_id: 1)
+  item = Item.create(description: "Visit Museum", destination: "Australia", journey_id: 1)
   visit journeys_path
 end
 

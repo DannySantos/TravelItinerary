@@ -9,7 +9,7 @@ Given(/^a traveller is signed in$/) do
 end
 
 Given(/^a traveller has a journey$/) do
-  journey = Journey.create!(title: "Australia Holiday", description: "Going on holiday to Australia")
+  journey = Journey.create!(title: "Australia Holiday", description: "Going on holiday to Australia", start_date: "01-01-2016", end_date: "01-02-2016")
   @traveller.journeys << journey
   visit journeys_path
 end
