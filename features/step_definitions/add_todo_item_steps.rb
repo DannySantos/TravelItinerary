@@ -21,6 +21,7 @@ end
 
 Given(/^they enter valid todo item details$/) do
   fill_in "Description", with: "Visit the crown casino"
+  fill_in "Destination", with: "Australia"
   sleep 1
 end
 

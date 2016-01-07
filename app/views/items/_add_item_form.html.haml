@@ -1,4 +1,6 @@
 = form_for :item, url: {action: "create"}, :remote => true do |f|
+  = f.label :destination
+  = f.text_field :destination
   = f.label :description
   = f.text_field :description
   = f.hidden_field :journey_id, value: @journey
