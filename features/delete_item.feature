@@ -1,6 +1,6 @@
 Feature: Deleting a todo item
 
-@javascript @wip
+@javascript
 Scenario: A traveller deletes a todo item
   Given a traveller is signed in
   Given a traveller has a journey
