@@ -1,0 +1,15 @@
+%p
+%li{ id: ['journey', journey.id]}
+  %h5
+    .journey-title{ id: ['title', journey.id]}
+      = journey.title
+  %h6
+    .journey-description{ id: ['description', journey.id]}
+      = journey.description
+  %ul{ class: "journey-#{journey.id}-items"}
+    - journey.items.each do |item|
+      %li.item{ id: ['item', item.id]}
+        = item.description
+  %p
+  .waves-effect.waves-light.btn.modal-trigger.add-item{ id: ['add-item-journey-id', journey.id]}
+    = link_to "Add New Todo Item", new_item_path(:journey_id => journey.id), :remote => true
