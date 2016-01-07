@@ -4,5 +4,7 @@ class Traveller < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :journeys
+
   validates :username, uniqueness: true, presence: true
 end

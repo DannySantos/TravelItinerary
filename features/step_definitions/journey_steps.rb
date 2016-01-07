@@ -1,3 +1,12 @@
+Given(/^a customer is signed in$/) do
+  Traveller.create!(username: "vvhiteknight", email: "test@test.com", password: "password", password_confirmation: "password")
+  visit new_traveller_session_path
+  
+  fill_in "Email", with: "test@test.com"
+  fill_in "Password", with: "password"
+  click_button "Log in"
+end
+
 Given(/^a customer is on the homepage$/) do
   visit root_path
   expect(page).to have_content "Add New Journey"
@@ -14,6 +23,10 @@ end
 Given(/^they enter valid details$/) do
   fill_in "Title", with: "Australia Holiday"
   fill_in "Description", with: "My amazing holiday to Australia"
+end
+
+Then(/^they press submit$/) do
+  click_button "Create Journey"
 end
 
 Then(/^a journey is created$/) do
@@ -40,8 +53,4 @@ end
 
 Given(/^they enter a title$/) do
   fill_in "Title", with: "Australia Holiday"
-end
-
-Then(/^they press submit$/) do
-  click_button "Create Journey"
 end

@@ -1,12 +1,14 @@
 class JourneysController < ApplicationController
   def index
+    @journeys = Journey.all
   end
 
   def new
   end
 
   def create
-    @journey = Journey.new(allowed_params)
+    @traveller = current_traveller
+    @journey = @traveller.journeys.build(allowed_params)
     if @journey.save
       flash[:notice] = "Journey created"
       redirect_to journeys_path

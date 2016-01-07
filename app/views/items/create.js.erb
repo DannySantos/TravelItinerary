@@ -1,0 +1,3 @@
+$('#add-item-modal').closeModal();
+
+$('.journey-<%= @item.journey_id %>-items').append('<li class="item" id="item_<%= @item.id %>"> <%= @item.description %> </li>')

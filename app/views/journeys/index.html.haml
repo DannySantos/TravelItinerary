@@ -1,3 +1,10 @@
-%h1 Add New Journey
+%h3 Add New Journey
 
 = link_to "Create new journey", new_journey_path
+.journeys
+  %ul.journey
+    = render @journeys
+
+#add-item-modal.modal
+  .modal-content
+    .add-item

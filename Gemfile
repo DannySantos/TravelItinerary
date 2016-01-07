@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'devise'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -20,5 +21,6 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'poltergeist'
+  gem 'launchy'
 end
 
