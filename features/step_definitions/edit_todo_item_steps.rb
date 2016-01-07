@@ -1,9 +1,10 @@
 Given(/^a traveller has a todo item$/) do
   item = Item.create(description: "Visit Museum", journey_id: 1)
+  visit journeys_path
 end
 
 Then(/^they select edit on a todo item$/) do
-  click_button('Edit')
+  click_link('Edit')
 end
 
 Then(/^they edit the todo item$/) do
@@ -11,11 +12,12 @@ Then(/^they edit the todo item$/) do
 end
 
 Then(/^they select the save button$/) do
-  click_button('Save')
+  click_button('Update Item')
+  sleep 1
 end
 
 Then(/^the todo item should be updated$/) do
-  expect(@traveller.journeys[0].item.last.description).to eq("Visit Aquarium")
+  expect(@traveller.journeys[0].items.last.description).to eq("Visit Aquarium")
 end
 
 Then(/^they should see the todo item update$/) do
