@@ -22,6 +22,7 @@ end
 Given(/^they enter valid todo item details$/) do
   fill_in "Description", with: "Visit the crown casino"
   fill_in "Destination", with: "Australia"
+  fill_in "Notes", with: "Remember to pick up my from travelex"
   sleep 1
 end
 
@@ -32,6 +33,8 @@ end
 
 Then(/^a todo item should be created$/) do
   expect(@traveller.journeys[0].items.first.description).to eq("Visit the crown casino")
+  expect(@traveller.journeys[0].items.first.destination).to eq("Australia")
+  expect(@traveller.journeys[0].items.first.notes).to eq("Remember to pick up my from travelex")
   expect(@traveller.journeys[0].items.count).to eq(1)
 end
 

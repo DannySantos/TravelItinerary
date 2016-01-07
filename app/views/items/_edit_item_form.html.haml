@@ -1,5 +1,9 @@
 = form_for @item, :remote => true do |f|
+  = f.label :destination
+  = f.text_field :destination
   = f.label :description
   = f.text_field :description
+  = f.label :notes
+  = f.text_field :notes
   = f.submit "Update Item"
   

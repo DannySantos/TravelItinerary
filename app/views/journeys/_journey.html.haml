@@ -10,6 +10,7 @@
     - journey.items.each do |item|
       %li.item{ id: ['item', item.id]}
         = item.description
+        = item.notes
         = link_to "Edit", edit_item_path(item.id), remote: true
         = link_to "Delete", item_path(item.id), method: :delete, remote: :true
   %p
