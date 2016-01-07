@@ -10,7 +10,8 @@
     - journey.items.each do |item|
       %li.item{ id: ['item', item.id]}
         = item.description
-        = link_to "Edit", edit_item_path(item.id), :remote => true
+        = link_to "Edit", edit_item_path(item.id), remote: true
+        = link_to "Delete", item_path(item.id), method: :delete, remote: :true
   %p
   .waves-effect.waves-light.btn.modal-trigger.add-item{ id: ['add-item-journey-id', journey.id]}
     = link_to "Add New Todo Item", new_item_path(:journey_id => journey.id), :remote => true
