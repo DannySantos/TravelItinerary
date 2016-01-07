@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
     @item.update(allowed_params)
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy!
+  end
+
   private
   def allowed_params
     params.require(:item).permit(:journey_id, :description)

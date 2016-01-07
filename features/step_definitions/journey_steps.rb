@@ -23,10 +23,14 @@ end
 Given(/^they enter valid details$/) do
   fill_in "Title", with: "Australia Holiday"
   fill_in "Description", with: "My amazing holiday to Australia"
+  page.find('#journey_start_date').set("01/01/2016")
+  page.find('#journey_end_date').set("01/02/2016")
+
 end
 
 Then(/^they press submit$/) do
   click_button "Create Journey"
+  sleep 1
 end
 
 Then(/^a journey is created$/) do
