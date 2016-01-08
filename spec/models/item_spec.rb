@@ -36,7 +36,17 @@ RSpec.describe Item, type: :model do
   describe "Geocode" do
     before do
       @item = Item.create!(destination: "Australia", address: "Melbourne", description: "Visit the art gallery", notes: "Pick up some money from bank")
+      
+      Geocoder.configure(:lookup => :test)
 
+      Geocoder::Lookup::Test.add_stub(
+      "Australia, Melbourne", [
+        {
+          'latitude'     => -37.814107,
+          'longitude'    => 144.96328,
+        }
+       ]
+      )
     end
 
     it "should convert destination and address into a string" do
