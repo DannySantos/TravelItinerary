@@ -32,4 +32,22 @@ RSpec.describe Item, type: :model do
       expect(@journey.items.count).to eq(0)
     end
   end
+
+  describe "Geocode" do
+    before do
+      @item = Item.create!(destination: "Australia", address: "Melbourne", description: "Visit the art gallery", notes: "Pick up some money from bank")
+
+    end
+
+    it "should convert destination and address into a string" do
+      expect(@item.geocode_string).to eq("Australia, Melbourne")
+    end
+
+    it "should convert the geocode string into lat / lng coordinates" do
+      expect(@item.latitude).to eq(-37.814107)
+      expect(@item.longitude).to eq(144.96328)
+    end
+  end
+
+
 end
