@@ -56,6 +56,4 @@ RSpec.describe Item, type: :model do
       expect(@item.longitude).to eq(144.96328)
     end
   end
-
-
 end
