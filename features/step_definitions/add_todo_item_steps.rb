@@ -34,14 +34,14 @@ end
 
 Then(/^a todo item should be created$/) do
   expect(@traveller.journeys[0].items.first.destination).to eq("Australia")
-  expect(@traveller.journeys[0].items.first.address).to eq("Australia")
-  expect(@traveller.journeys[0].items.first.description).to eq("Visit the crown casino")
+  expect(@traveller.journeys[0].items.first.address).to eq("Melbourne")
+  expect(@traveller.journeys[0].items.first.description).to eq("Visit an art gallery")
   expect(@traveller.journeys[0].items.first.notes).to eq("Remember to pick up my from travelex")
-  expect(@traveller.journeys[0].items.first.latitude).to eq("-37.814107")
-  expect(@traveller.journeys[0].items.first.longitude).to eq("144.96328")
+  expect(@traveller.journeys[0].items.first.latitude).to eq(-37.814107)
+  expect(@traveller.journeys[0].items.first.longitude).to eq(144.96328)
   expect(@traveller.journeys[0].items.count).to eq(1)
 end
 
 Then(/^they should see the todo item$/) do
-  expect(page).to have_content("Visit the crown casino")
+  expect(page).to have_content("Visit an art gallery")
 end

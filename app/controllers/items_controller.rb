@@ -24,6 +24,6 @@ class ItemsController < ApplicationController
 
   private
   def allowed_params
-    params.require(:item).permit(:journey_id, :description, :destination, :notes)
+    params.require(:item).permit(:journey_id, :description, :destination, :notes, :address)
   end
 end

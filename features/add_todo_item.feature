@@ -1,6 +1,6 @@
 Feature: Add todo item
 
-@javascript
+@javascript @wip
 Scenario: A traveller adds a todo item
   Given a traveller is signed in
   Given a traveller has a journey
