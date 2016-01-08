@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'devise'
 gem 'materialize-sass'
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'
