@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :travellers
-  resources :journeys, only: [:index, :new, :create]
+  resources :journeys, only: [:index, :new, :create] do
+    member do
+      get :map
+    end
+  end
   resources :items, only: [:create, :new, :edit, :update, :destroy]
   root to: 'journeys#index'
 end

@@ -23,6 +23,9 @@ class JourneysController < ApplicationController
     end
   end
 
+  def map
+  end
+
   private
   def set_current_traveller
     @traveller = current_traveller

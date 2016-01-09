@@ -7,10 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <script type="text/javascript" src='https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.secrets.google_server_api %>'></script>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-
+<style type="text/css">
+  html, body, #map-modal { height: 100%; margin: 0; padding: 0; }
+  #map { height: 100%; }
+</style>
+<div id="dialog" style="display: none">
+    <div id="dvMap" style="height: 380px; width: 580px;">
+    </div>
+</div>
 <%= yield %>
-
 </body>
 </html>

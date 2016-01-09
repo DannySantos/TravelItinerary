@@ -23,7 +23,7 @@ Given(/^they enter valid todo item details$/) do
   fill_in "Destination", with: "Australia"
   fill_in "Address", with: "Melbourne"
   fill_in "Description", with: "Visit an art gallery"
-  fill_in "Notes", with: "Remember to pick up my from travelex"
+  fill_in "Notes", with: "Remember to pick up my money from travelex"
   sleep 1
 end
 
@@ -36,7 +36,7 @@ Then(/^a todo item should be created$/) do
   expect(@traveller.journeys[0].items.first.destination).to eq("Australia")
   expect(@traveller.journeys[0].items.first.address).to eq("Melbourne")
   expect(@traveller.journeys[0].items.first.description).to eq("Visit an art gallery")
-  expect(@traveller.journeys[0].items.first.notes).to eq("Remember to pick up my from travelex")
+  expect(@traveller.journeys[0].items.first.notes).to eq("Remember to pick up my money from travelex")
   expect(@traveller.journeys[0].items.first.latitude).to eq(-37.814107)
   expect(@traveller.journeys[0].items.first.longitude).to eq(144.96328)
   expect(@traveller.journeys[0].items.count).to eq(1)
