@@ -7,14 +7,20 @@
     .journey-description{ id: ['description', journey.id]}
       = journey.description
   %p
-    = link_to "Open map", map_journey_path(journey.id), remote: :true
   %ul{ class: "journey-#{journey.id}-items"}
     - journey.items.each do |item|
-      %li.item{ id: ['item', item.id]}
-        = item.description
-        = item.notes
-        = link_to "Edit", edit_item_path(item.id), remote: true
-        = link_to "Delete", item_path(item.id), method: :delete, remote: :true
-  %p
+      .col.s12.m7
+        %li.item.card{ id: ['item', item.id]}
+          .card-image
+            %img{:src => "sample-image.jpg", :alt => ""}
+          .card-content
+            .card-title.grey-text.text-darken-4
+              = item.description + " in " 
+              = item.address
+          %p
+          .card-links
+          = link_to "Edit", edit_item_path(item.id), remote: true
+          = link_to "Delete", item_path(item.id), method: :delete, remote: :true
+    %p
   .waves-effect.waves-light.btn.modal-trigger.add-item{ id: ['add-item-journey-id', journey.id]}
     = link_to "Add New Todo Item", new_item_path(:journey_id => journey.id), remote: :true

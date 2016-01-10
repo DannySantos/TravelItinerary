@@ -5,15 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<style type="text/css">
-  html, body { height: 100%; margin: 0; padding: 0; }
-  #map { height: 100%; }
-</style>
-<div id="map"></div>
 <%= yield %>
 </body>
 <script async defer

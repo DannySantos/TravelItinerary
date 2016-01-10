@@ -1,12 +1,25 @@
-%h3 Add New Journey
+#container
+  %navbar.fixed
+    %nav
+      .nav-wrapper
+        %ul#nav-mobile.right
+          %li
+            %a{:href => "#{new_journey_path}"} Create New Journey
+          %li
+            %a{:href => "#{}"} Hello
+          %li
+            %a{:href => "#{}"} Hello
 
-= link_to "Create new journey", new_journey_path
-.journeys
-  %ul.journey
-    = render @journeys
+  #side-menu
+    .journeys
+      %ul.journey
+        = render @journeys
+  #map
 
-#add-item-modal.modal
-  .modal-content
-#edit-item-modal.modal
-  .modal-content
+
+  #add-item-modal.modal
+    .modal-content
+  #edit-item-modal.modal
+    .modal-content
+
 

@@ -203,7 +203,7 @@ GEM
       rdoc (~> 4.0)
     sexp_processor (4.6.0)
     slop (3.6.0)
-    spring (1.6.1)
+    spring (1.6.2)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
