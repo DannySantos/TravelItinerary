@@ -9,9 +9,9 @@ class JourneysController < ApplicationController
     end
 
     if params[:id] == nil
-      @journeys = Journey.where(:traveller_id => @traveller.id)
+      @journey = Journey.where(:traveller_id => @traveller.id).first
     else
-      @journeys = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
+      @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
     end
   end
 

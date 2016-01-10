@@ -15,8 +15,8 @@
   #side-menu
     .journeys
       %ul.journey
-        = render @journeys
-  #map
+        = render @journey
+  #map{data: {items: @items_json}}
 
 
   #add-item-modal.modal
