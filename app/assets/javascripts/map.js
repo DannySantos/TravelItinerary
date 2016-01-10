@@ -11,12 +11,10 @@ function initMap() {
   var bounds = bounds = new google.maps.LatLngBounds();
 
   _(items).each(function(todo_item){
-    console.log(todo_item)
     var marker = addMarker(todo_item.latitude, todo_item.longitude, todo_item.id) 
     markers[todo_item.id] = marker
     adjustBounds(bounds, marker)
   });
-    console.log(markers)
 };
 
 function addMarker(lat, lng, id){
