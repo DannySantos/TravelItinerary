@@ -5,7 +5,13 @@ class JourneysController < ApplicationController
     if @traveller == nil
       redirect_to new_traveller_session_path
     else
-    @journeys = Journey.where(:traveller_id => @traveller.id)
+      @journey_menu_items = Journey.where(:traveller_id => @traveller.id)
+    end
+
+    if params[:id] == nil
+      @journeys = Journey.where(:traveller_id => @traveller.id)
+    else
+      @journeys = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
     end
   end
 

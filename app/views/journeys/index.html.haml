@@ -1,4 +1,6 @@
 #container
+  %ul#dropdown1.dropdown-content
+    = render 'journeys/journey_menu_list'
   %navbar.fixed
     %nav
       .nav-wrapper
@@ -7,8 +9,8 @@
             %a{:href => "#{new_journey_path}"} Create New Journey
           %li
             %a{:href => "#{}"} Hello
-          %li
-            %a{:href => "#{}"} Hello
+          %li.dropdown-button{"data-activates" => "dropdown1"}
+            %a{:href => "#{}"} Select Journey
 
   #side-menu
     .journeys
