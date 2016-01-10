@@ -10,8 +10,10 @@ class JourneysController < ApplicationController
 
     if params[:id] == nil
       @journey = Journey.where(:traveller_id => @traveller.id).first
+      items_to_json
     else
       @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
+      items_to_json
     end
   end
 
@@ -33,6 +35,9 @@ class JourneysController < ApplicationController
   end
 
   private
+  def items_to_json
+      @items_json = @journey.items.to_json
+  end
   def set_current_traveller
     @traveller = current_traveller
   end
