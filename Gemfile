@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'materialize-sass'
 gem 'geocoder'
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'pry-byebug'
