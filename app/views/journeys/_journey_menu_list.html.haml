@@ -1,0 +1,3 @@
+- @journey_menu_items.each do |journey|
+  %li{ id: ['journey', journey.id]}
+    =link_to journey.title, journeys_path(:id => journey.id)
