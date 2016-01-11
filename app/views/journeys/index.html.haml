@@ -15,6 +15,7 @@
   #side-menu
     .journeys
       %ul.journey
+      -if @journey
         = render @journey
   #map{data: {items: @items_json}}
 

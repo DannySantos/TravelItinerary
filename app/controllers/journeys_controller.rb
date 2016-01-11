@@ -6,14 +6,14 @@ class JourneysController < ApplicationController
       redirect_to new_traveller_session_path
     else
       @journey_menu_items = Journey.where(:traveller_id => @traveller.id)
-    end
 
-    if params[:id] == nil
-      @journey = Journey.where(:traveller_id => @traveller.id).first
-      items_to_json
-    else
-      @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
-      items_to_json
+      if params[:id] == nil
+        @journey = Journey.where(:traveller_id => @traveller.id).first
+        items_to_json
+      else
+        @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
+        items_to_json
+      end
     end
   end
 
@@ -36,7 +36,7 @@ class JourneysController < ApplicationController
 
   private
   def items_to_json
-      unless @journey.method_defined? :items
+      if @traveller.journeys.count != 0        
         @items_json = @journey.items.to_json
       end
   end
