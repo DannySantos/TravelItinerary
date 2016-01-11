@@ -18,6 +18,11 @@
     </div>
   <% end -%>
 
+  <% if params[:type] == "Provider" %>
+    <%= f.hidden_field :sign_in_as, value: "Provider" %>
+  <% end %>
+
+
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>

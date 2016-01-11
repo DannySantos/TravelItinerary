@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    if resource.type == "Provider"
+    if params[:traveller][:sign_in_as] == "Provider"
       properties_path
     else
       journeys_path
