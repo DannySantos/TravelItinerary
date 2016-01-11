@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     end
   end
   resources :items, only: [:create, :new, :edit, :update, :destroy]
-  root to: 'journeys#index'
+  resources :properties, only: [:index]
+  root to: 'home#index'
 end
