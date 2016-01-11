@@ -1,6 +1,6 @@
 Feature: A provider signs up
 
-@javascript @wip
+@javascript
 Scenario: Provider signs up
   Given a visitor is on the homepage
     And they choose to sign up as a provider
