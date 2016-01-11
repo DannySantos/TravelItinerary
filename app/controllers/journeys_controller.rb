@@ -36,7 +36,9 @@ class JourneysController < ApplicationController
 
   private
   def items_to_json
-      @items_json = @journey.items.to_json
+      unless @journey.method_defined? :items
+        @items_json = @journey.items.to_json
+      end
   end
   def set_current_traveller
     @traveller = current_traveller
