@@ -28,4 +28,17 @@ RSpec.describe Traveller, type: :model do
         expect(Traveller.all.length).to eq(1)
       end
   end
+
+  describe "A traveller signs up as a provider" do
+      before do
+        Traveller.create!(username: "Simon123", email: "test@test.com", password: "password", password_confirmation: "password", type: "Provider")
+      end
+
+      it "should create a provider" do
+        expect(Traveller.last.username).to eq("Simon123")
+        expect(Traveller.last.email).to eq("test@test.com")
+        expect(Traveller.last.type).to eq("Provider")
+        expect(Traveller.all.length).to eq(1)
+      end
+  end
 end
