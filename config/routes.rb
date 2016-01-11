@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
   end
   resources :items, only: [:create, :new, :edit, :update, :destroy]
-  resources :properties, only: [:index]
+  resources :properties, only: [:index, :new, :create]
   root to: 'home#index'
 end

@@ -1,0 +1,10 @@
+= form_for :property, url: {action: "create"}, :remote => true do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :address
+  = f.text_field :address
+  = f.label :country
+  = f.text_field :country
+  = f.label :description
+  = f.text_field :description
+  = f.submit "Add Property"
