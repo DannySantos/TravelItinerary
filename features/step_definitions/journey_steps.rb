@@ -9,11 +9,11 @@ end
 
 Given(/^a customer is on the homepage$/) do
   visit root_path
-  expect(page).to have_content "Add New Journey"
+  expect(page).to have_content "Create New Journey"
 end
 
 Given(/^they select create a new journey$/) do
-  click_link "Create new journey"
+  click_link "Create New Journey"
 end
 
 Then(/^they should be on the create new journey page$/) do
