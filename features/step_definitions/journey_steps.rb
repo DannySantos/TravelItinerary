@@ -8,7 +8,6 @@ Given(/^a customer is signed in$/) do
 end
 
 Given(/^a customer is on the homepage$/) do
-  visit root_path
   expect(page).to have_content "Create New Journey"
 end
 
