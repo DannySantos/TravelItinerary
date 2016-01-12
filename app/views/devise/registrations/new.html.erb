@@ -26,8 +26,8 @@
   </div>
 
   <% if params[:type] == "Provider" %>
+    <%= session[:sign_in_as] = "Provider" %>
     <%= f.hidden_field :type, value: "Provider" %>
-    <%= f.hidden_field :sign_in_as, value: "Provider" %>
   <% end %>
 
   <div class="actions">

@@ -6,11 +6,11 @@
       .nav-wrapper
         %ul#nav-mobile.right
           %li
-            %a{:href => "#{new_journey_path}"} Create New Journey
-          %li
-            %a{:href => "#{}"} Hello
+            = link_to "Create New Journey", new_journey_path
           %li.dropdown-button{"data-activates" => "dropdown1"}
-            %a{:href => "#{}"} Select Journey
+            = link_to "Select Journey"
+          %li
+            = link_to "Sign out", destroy_traveller_session_path, method: :delete
 
   #side-menu
     .journeys

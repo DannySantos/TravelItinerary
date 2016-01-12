@@ -19,9 +19,8 @@
   <% end -%>
 
   <% if params[:type] == "Provider" %>
-    <%= f.hidden_field :sign_in_as, value: "Provider" %>
+    <%= session[:sign_in_as] = "Provider" %>  
   <% end %>
-
 
   <div class="actions">
     <%= f.submit "Log in" %>
