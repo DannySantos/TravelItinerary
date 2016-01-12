@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :authenticate_traveller!, :set_current_provider
+  
   def index
     @properties = Property.all
   end
