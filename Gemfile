@@ -15,7 +15,7 @@ gem 'materialize-sass'
 gem 'geocoder'
 gem 'underscore-rails'
 gem 'omniauth'
-gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'pry-byebug'
