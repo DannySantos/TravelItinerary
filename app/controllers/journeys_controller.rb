@@ -1,10 +1,7 @@
 class JourneysController < ApplicationController
-    before_action :set_current_traveller
+    before_action :authenticate_traveller!, :set_current_traveller
 
   def index
-    if @traveller == nil
-      redirect_to new_traveller_session_path
-    else
       @journey_menu_items = Journey.where(:traveller_id => @traveller.id)
 
       if params[:id] == nil
@@ -14,7 +11,6 @@ class JourneysController < ApplicationController
         @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
         items_to_json
       end
-    end
   end
 
   def new
