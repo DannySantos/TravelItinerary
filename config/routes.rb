@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :travellers
+  devise_for :travellers, :controllers => { :omniauth_callbacks => "travellers/omniauth_callbacks" }
   resources :journeys, only: [:index, :new, :create] do
     member do
       get :map
