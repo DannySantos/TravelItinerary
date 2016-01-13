@@ -32,7 +32,7 @@ class JourneysController < ApplicationController
 
   private
   def items_to_json
-      if @traveller.journeys.count != 0        
+      unless @journey.method_defined? :items       
         @items_json = @journey.items.to_json
       end
   end

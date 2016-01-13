@@ -6,7 +6,7 @@
       .nav-wrapper
         %ul#nav-mobile.right
           %li
-            = link_to "Create New Journey", new_journey_path
+            = link_to "Create New Journey", new_journey_path, remote: true
           %li.dropdown-button{"data-activates" => "dropdown1"}
             = link_to "Select Journey"
           %li
@@ -25,6 +25,8 @@
   #edit-item-modal.modal
     .modal-content
   #view-rentals-modal.modal
+    .modal-content
+  #add-journey-modal.modal
     .modal-content
 
 

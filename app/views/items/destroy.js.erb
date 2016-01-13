@@ -1,2 +1,7 @@
-$('#item_<%= @item.id %>').remove();
+$("#item_<%= @item.id %>").animate({opacity: '0'});
+
+setTimeout(function (){
+  $('#item_<%= @item.id %>').remove();
+}, 600);
+
 removeMarker(<%= @item.id %>);
