@@ -13,6 +13,11 @@ class PropertiesController < ApplicationController
   def new
   end
 
+  def view_rentals
+    @item = Item.find(params[:item_id])
+    @properties = Property.search_rentals(@item)
+  end
+
   private
   def allowed_params
     params.require(:property).permit(:provider_id, :description, :address, :country, :title)
