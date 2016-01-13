@@ -4,7 +4,7 @@ class JourneysController < ApplicationController
   def index
       @journey_menu_items = Journey.where(:traveller_id => @traveller.id)
 
-      if params[:id] == nil
+      if params[:id] == nil && @traveller.journeys.count != 0
         @journey = Journey.where(:traveller_id => @traveller.id).first
         items_to_json
       else
