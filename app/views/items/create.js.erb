@@ -1,4 +1,4 @@
 $('#add-item-modal').closeModal();
 
-$('.journey-<%= @item.journey_id %>-items').append('<li class="item" id="item_<%= @item.id %>"> <%= @item.description %> <a data-remote="true" href="/items/<%= @item.id %>/edit">Edit</a></li>')
+$('.journey-<%= @item.journey_id %>-items').append("<%= j render 'items/item' %>")
 addMarker(<%= @item.latitude %>, <%= @item.longitude %>);

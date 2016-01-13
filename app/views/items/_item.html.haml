@@ -1,0 +1,13 @@
+.col.s12.m7
+  %li.item.card{ id: ['item', @item.id]}
+    .card-image
+      %img{:src => "sample-image.jpg", :alt => @item.description}
+    .card-content
+      .card-title.grey-text.text-darken-4
+        = @item.description + " in " 
+        = @item.address
+    %p
+    .card-links
+    = link_to "Edit", edit_item_path(@item.id), remote: true
+    = link_to "Delete", item_path(@item.id), method: :delete, remote: :true
+    = link_to "View Rentals", view_rentals_properties_path(:item_id => @item.id), remote: true
