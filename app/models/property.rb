@@ -12,7 +12,6 @@ class Property < ActiveRecord::Base
       if Geocoder::Calculations.distance_between(
         [item.latitude, item.longitude], 
         [property.latitude, property.longitude]) < 25
-      
         @rentals << property
       end
     end
