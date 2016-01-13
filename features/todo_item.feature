@@ -1,6 +1,6 @@
 Feature: Rentals Near Item
 
-@javascript @wip
+@javascript
 Scenario: A traveller sees the number of rentals near to a todo item
   Given a traveller is signed in
   Given a traveller has a journey
