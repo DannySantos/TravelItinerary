@@ -8,7 +8,7 @@ class JourneysController < ApplicationController
         @journey = Journey.where(:traveller_id => @traveller.id).first
         items_to_json
       else
-        @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id])
+        @journey = Journey.where(:traveller_id => @traveller.id, :id => params[:id]).first
         items_to_json
       end
   end
@@ -32,6 +32,8 @@ class JourneysController < ApplicationController
 
   private
   def items_to_json
+
+
       if @journey.respond_to? :items
         if @journey.items != 0     
           @items_json = @journey.items.to_json
