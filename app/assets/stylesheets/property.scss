@@ -6,7 +6,7 @@
   border-radius: 10px;
 }
 
-.property-image img{
+.property-image img, .rental img{
   width: 300px;
   padding: 10px 10px 10px 10px;
   border-radius: 20px;
@@ -18,4 +18,8 @@
 
 .page-title {
   text-align: center;
+}
+
+#view-rentals ul {
+  list-style: none;
 }

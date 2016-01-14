@@ -1,2 +1,2 @@
 $('#edit-item-modal').closeModal();
-$('#item_<%= @item.id %>').html('<%= @item.description %> <a data-remote="true" href="/items/<%= @item.id %>/edit">Edit</a>');
+$('#item_<%= @item.id %>').html('<%= j render 'items/item' %>');
