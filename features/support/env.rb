@@ -6,6 +6,8 @@
 
 require 'cucumber/rails'
 require 'capybara/poltergeist'
+require 'simplecov'
+SimpleCov.start
 
 
 Capybara.register_driver :poltergeist do |app|

@@ -13,6 +13,7 @@ end
 
 Given(/^they select create a new journey$/) do
   click_link "Create New Journey"
+  sleep 1
 end
 
 Then(/^they should be on the create new journey page$/) do
