@@ -1,2 +1,2 @@
 $('#add-property-modal').closeModal();
-$('.property-list').append('<li> <%= @property.title %> </li>')
+$('.property-list').append("<%= j render 'properties/add_property' %>")
