@@ -2,7 +2,11 @@ class PropertiesController < ApplicationController
   before_action :authenticate_traveller!, :set_current_provider
   
   def index
-    @properties = Property.all
+    if @provider.type != "Provider"
+      redirect_to journeys_path
+    else
+      @properties = Property.where(:provider_id => @provider.id)
+    end
   end
 
   def create
@@ -20,7 +24,7 @@ class PropertiesController < ApplicationController
 
   private
   def allowed_params
-    params.require(:property).permit(:provider_id, :description, :address, :country, :title)
+    params.require(:property).permit(:provider_id, :description, :address, :country, :title, :img_url)
   end
 
   def set_current_provider

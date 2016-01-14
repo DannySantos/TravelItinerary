@@ -1,12 +1,16 @@
-Provider Dashboard
+
 #container
   %navbar.fixed
-    %nav
+    %nav.blue.darken-2
       .nav-wrapper
+        .brand-logo.center Travel Itinerary
         %ul#nav-mobile.right
           %li
             = link_to "Add Rental Property", new_property_path, remote: :true
+          %li
+            = link_to "Sign out", destroy_traveller_session_path, method: :delete
   #main
+    %h4.page-title Provider Dashboard
     %ul.property-list
       = render @properties
   #add-property-modal.modal
