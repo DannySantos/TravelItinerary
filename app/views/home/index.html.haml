@@ -1,9 +1,20 @@
-Welcome to Travel Todo
-%p
-= link_to "Sign up as Traveller", new_traveller_registration_path
-%p
-= link_to "Sign up as Provider", new_traveller_registration_path(:type => "Provider")
-%p
-= link_to "Sign in as a Traveller", new_traveller_session_path
-%p
-= link_to "Sign in as a Provider", new_traveller_session_path(:type => "Provider")
+#container
+  %navbar.fixed
+    %nav.blue.darken-2
+      .nav-wrapper
+        %a.brand-logo.center{:href => ""}Travel Itinerary
+        %ul#nav-mobile.right
+          %li
+            = link_to "Sign in as a Provider", new_traveller_session_path(:type => "Provider")
+          %li
+            = link_to "Sign up as Provider", new_traveller_registration_path(:type => "Provider")
+  #main
+    .header
+      %h1
+        All your travel plans in one place
+      %h2
+        Sign up now and create your own travel itinerary
+  .traveller-buttons
+    %a.waves-effect.waves-light.btn-large.blue.darken-2{:href => new_traveller_registration_path} Sign up
+    %p
+    %a.waves-effect.waves-light.btn-large.blue.darken-2{:href => new_traveller_session_path} Sign in
