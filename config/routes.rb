@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
   resources :items, only: [:create, :new, :edit, :update, :destroy]
-  resources :properties, only: [:index, :new, :create] do
+  resources :properties, only: [:index, :new, :create, :destroy] do
     collection do
       get :view_rentals
     end

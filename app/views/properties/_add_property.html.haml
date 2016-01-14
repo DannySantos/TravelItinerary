@@ -12,3 +12,5 @@
     .property-description{ id: ['title', @property.id]}
       Description :
       = @property.description
+  = link_to "Delete", property_path(@property.id), method: :delete, remote: :true
+  
