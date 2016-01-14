@@ -1,16 +1,19 @@
-%ul
-  - @properties.each do |property|
-    %li.property{ id: ['property', property.id]}
-      .property-image{ id: ['title', property.id]}
-        %img{:src => property.img_url, :alt => ""}/
-      .property-title{ id: ['title', property.id]}
-        Property: 
-        = property.title
-      .property-address{ id: ['title', property.id]}
-        Address :
-        = property.address + ","
-        = property.country
-      .property-description{ id: ['title', property.id]}
-        Description :
-        = property.description
+- if @properties.count != 0
+  %ul
+    - @properties.each do |property|
+      %li.property{ id: ['property', property.id]}
+        .property-image{ id: ['title', property.id]}
+          %img{:src => property.img_url, :alt => ""}/
+        .property-title{ id: ['title', property.id]}
+          Property: 
+          = property.title
+        .property-address{ id: ['title', property.id]}
+          Address :
+          = property.address + ","
+          = property.country
+        .property-description{ id: ['title', property.id]}
+          Description :
+          = property.description
+-else
+  No Properties Found
     
