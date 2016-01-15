@@ -6,7 +6,7 @@ todo items and seeing those items on a map.
 It also allows property providers to post their rental properties on the site so that travellers can see which properties
 are available near to their todo items.
 
-Key Statistics :
+<b>Key Statistics :
 
 Code to Test Ratio: 1:2.2
 
@@ -18,7 +18,7 @@ Key Gems Used: Devise / Geocoder / Omniauth
 
 Key API's Used: Google Maps / Facebook
 
-Pivotal Tracker :
+<b>Pivotal Tracker :
 
 I used an agile approach to this project and organised my project using Pivotal Tracker
 
