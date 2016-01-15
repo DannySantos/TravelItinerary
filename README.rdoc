@@ -1,31 +1,31 @@
 Final Project for WeGotCoders : Travel Itinerary
 
-For my final project for WeGotCoders I made a Travel Itinerary App. This app allows users to plan journeys by creating
-todo items and seeing those items on a map.
+  For my final project for WeGotCoders I made a Travel Itinerary App. This app allows users to plan journeys by creating
+  todo items and seeing those items on a map.
 
-It also allows property providers to post their rental properties on the site so that travellers can see which properties
-are available near to their todo items.
+  It also allows property providers to post their rental properties on the site so that travellers can see which properties
+  are available near to their todo items.
 
-<b>Key Statistics :
+Key Statistics :
 
-Code to Test Ratio: 1:2.2
+  Code to Test Ratio: 1:2.2
 
-Code Coverage: 99%
+  Code Coverage: 99%
 
-Key Technologies Used: Ruby on Rails / PostgreSQL / Ajax / Javascript / Jquery / HAML
+  Key Technologies Used: Ruby on Rails / PostgreSQL / Ajax / Javascript / Jquery / HAML
 
-Key Gems Used: Devise / Geocoder / Omniauth
+  Key Gems Used: Devise / Geocoder / Omniauth
 
-Key API's Used: Google Maps / Facebook
+  Key API's Used: Google Maps / Facebook
 
-<b>Pivotal Tracker :
+Pivotal Tracker :
 
-I used an agile approach to this project and organised my project using Pivotal Tracker
+  I used an agile approach to this project and organised my project using Pivotal Tracker
 
-https://www.pivotaltracker.com/n/projects/1494968
+  https://www.pivotaltracker.com/n/projects/1494968
 
-Here I created user stories, assigned those stories a diffuiculty using a 3 point system, and then implemented those stories over two 1 week iterations.
+  Here I created user stories, assigned those stories a diffuiculty using a 3 point system, and then implemented those stories over two 1 week iterations.
 
 Project Link :
 
-https://travel-itinerary.herokuapp.com
+  https://travel-itinerary.herokuapp.com
