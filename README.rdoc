@@ -1,28 +1,27 @@
-== README
+Final Project for WeGotCoders : Travel Itinerary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For my final project for WeGotCoders I made a Travel Itinerary App. This app allows users to plan journeys by creating
+todo items and seeing those items on a map.
 
-Things you may want to cover:
+It also allows property providers to post their rental properties on the site so that travellers can see which properties
+are available near to their todo items.
 
-* Ruby version
+Key Statistics :
 
-* System dependencies
+Code to Test Ratio: 1:2.2
+Code Coverage: 99%
+Key Technologies Used: Ruby on Rails / PostgreSQL / Ajax / Javascript / Jquery / HAML
+Key Gems Used: Devise / Geocoder / Omniauth
+Key API's Used: Google Maps / Facebook
 
-* Configuration
+Pivotal Tracker :
 
-* Database creation
+I used an agile approach to this project and organised my project using Pivotal Tracker
 
-* Database initialization
+https://www.pivotaltracker.com/n/projects/1494968
 
-* How to run the test suite
+Here I created user stories, assigned those stories a diffuiculty using a 3 point system, and then implemented those stories over two 1 week iterations.
 
-* Services (job queues, cache servers, search engines, etc.)
+Project Link :
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+https://travel-itinerary.herokuapp.com
