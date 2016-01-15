@@ -9,9 +9,13 @@ are available near to their todo items.
 Key Statistics :
 
 Code to Test Ratio: 1:2.2
+
 Code Coverage: 99%
+
 Key Technologies Used: Ruby on Rails / PostgreSQL / Ajax / Javascript / Jquery / HAML
+
 Key Gems Used: Devise / Geocoder / Omniauth
+
 Key API's Used: Google Maps / Facebook
 
 Pivotal Tracker :
