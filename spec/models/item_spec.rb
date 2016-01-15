@@ -7,7 +7,7 @@ RSpec.describe Item, type: :model do
     end
 
     it "should add a todo to a journey" do
-      todo = Item.create!(destination: "Australia", description: "Visit the great barrier reef", notes: "Pick up some money from bank")
+      todo = Item.create!(destination: "Australia", address: "Melbourne", description: "Visit the great barrier reef", notes: "Pick up some money from bank")
       @journey.items << todo
 
       expect(@journey.items.last.destination).to eq("Australia")
@@ -17,15 +17,23 @@ RSpec.describe Item, type: :model do
     end
 
     it "should validate the presence of a destination" do
-      todo = Item.new(description: "Visit the great barrier reef")
+      todo = Item.new(description: "Visit the great barrier reef", address: "Melbourne")
       @journey.items << todo
 
       expect {todo.save!}.to raise_error(ActiveRecord::RecordInvalid,'Validation failed: Destination can\'t be blank')
       expect(@journey.items.count).to eq(0)
     end
 
+    it "should validate the presence of a address" do
+      todo = Item.new(destination: "Australia", description: "Visit the great barrier reef")
+      @journey.items << todo
+
+      expect {todo.save!}.to raise_error(ActiveRecord::RecordInvalid,'Validation failed: Address can\'t be blank')
+      expect(@journey.items.count).to eq(0)
+    end
+
     it "should validate the presence of a description" do
-      todo = Item.new(destination: "Australia")
+      todo = Item.new(destination: "Australia", address: "Melbourne")
       @journey.items << todo
 
       expect {todo.save!}.to raise_error(ActiveRecord::RecordInvalid,'Validation failed: Description can\'t be blank')
